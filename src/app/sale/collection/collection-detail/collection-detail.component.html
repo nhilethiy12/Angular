@@ -1,0 +1,51 @@
+<app-nav></app-nav>
+<div class="layout_padding collection_section">
+    <div class="container">
+        <h1 class="new_text"><strong>New  Collection</strong></h1>
+        <p class="consectetur_text">New collect to be released to the public in 2022</p>
+        <div class="collection_section_2">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="about-img">
+                        
+                        <div class="shoes-img">
+                            <a href="/product-detail/{{collect.productId}}">
+                                <img [src]="createImgPath(collect.collectionImage)">
+                            </a>
+                        </div>
+                        <p class="sport_text">{{collect.productName1}}</p>
+                        <div class="dolar_text">$<strong style="color: #f12a47;">{{collect.pricePro1}}</strong> </div> 
+                    </div>
+                    <div class="new_bt2"><p class = "text1">{{collect.collectionName}}</p>
+                        <p class = "text2">{{collect.price}}</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-img2">
+                        <div class="shoes-img2">
+                            <a href="/product-detail/{{collect.productId2}}">
+                                <img [src]="createImgPath(collect.collectionImage2)">
+                            </a>
+                        </div>
+                        <p class="sport_text">{{collect.productName2}}</p>
+                        <div class="dolar_text">$<strong style="color: #f12a47;">{{collect.pricePro2}}</strong> </div>
+                    </div>
+                    <div class="new_bt3">
+                        <div class = "text">
+                            <div class ="chotdon">
+                                <div class="right_part2">
+                                    <a routerLink="/checkout">
+                                        <button class="buy_bt"(click)=addCart(collect)>Buy now</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Collection Detail</h3>
+            <p>{{collect.detail}}</p>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

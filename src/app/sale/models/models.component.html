@@ -1,0 +1,77 @@
+<!-- New Arrivals section start -->
+<app-nav></app-nav>
+<div class="collection_text">Models</div>
+<div class="collection_section layout_padding">
+    <div class="container">
+        <p class="consectetur_text text-center" style="margin-top: 20pt;">I know you have a lot of choices. But let us prove that your choice is right!</p>
+    </div>
+</div>
+<div class="layout_padding gallery_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4" *ngFor="let pro of products | 
+                paginate: { 
+                    itemsPerPage: 9, 
+                    currentPage: page,
+                    totalItems: totalLength }">
+                <div class="best_shoes" id="a">
+                    <p class="best_text">{{pro.productName}}</p>
+                    <div class="shoes_icon">
+                        <a routerLink="product-detail/{{pro.productId}}"> 
+                            <img [src]="createImgPath(pro.fileName)">
+                        </a> 
+                    </div>
+                    
+                    <div class="star_text">
+                        <div class="left_part">
+                            <div class="shoes_price">$<span style="color: #8b8b8b;">{{pro.price | number}}</span></div>
+                        </div>
+                    </div>
+                    <div class ="chotdon">
+                        <div class="left_part2">
+                                <button class="cart_bt"><i class="fa-solid fa-cart-plus"></i>
+                                    <span class="text_add"(click)=addCart(pro) style="color: white;"> Add To Cart</span>
+                                </button>                       
+                        </div>
+                            <div class="right_part2">
+                                <a routerLink="/checkout">
+                                    <button class="buy_bt"(click)=addCart(pro)>Buy now</button>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <pagination-controls class="text-center my-pagination" (pageChange)="page = $event"></pagination-controls>
+</div>
+<button md-raised-button id="my-btn" class="md-raised md-primary" (click)="onEdit()"><i class="fa-solid fa-angle-up"></i></button>
+<app-footer></app-footer>
+<script>
+    //Get the button
+    var mybutton = document.getElementById("my-btn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+        {
+            mybutton.style.display = "block";
+        } 
+        else 
+        {
+            mybutton.style.display = "none";
+        }
+    }
+</script>
+<style>
+    #a{
+        transition-duration: .3s;
+        transition-property: transform;
+        transition-timing-function: ease-out;
+    }
+    #a:hover{
+        transform: translateY(-5px);
+    }
+</style>

@@ -1,0 +1,123 @@
+<app-nav></app-nav>
+<div class="collection_text">Collection</div>
+<div class="layout_padding collection_section">
+    <div class="container">
+        <h1 class="new_text"><strong>New  Collection</strong></h1>
+        <p class="consectetur_text">New products to be released to the public in 2022</p>
+        <div class="collection_section_2">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="about-img">
+                        <button class="new_bt">New</button>
+                        <div class="shoes-img">
+                                <a routerLink="collection-detail/{{collect[0].collectionId}}">
+                                    <img [src]="createImgPath(collect[0].imageName)">
+                                </a>
+                            </div>
+                            <p class="sport_text">{{collect[0].productName1}}</p>
+                            <div class="dolar_text">$<strong style="color: #f12a47;">{{collect[0].pricePro1}}</strong> </div>
+                            
+                        </div>
+                            <div class="new_bt2"><p class = "text1">{{collect[0].collectionName}}</p>
+                                <p class = "text2">{{collect[0].price}}</p>
+                            </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-img2">
+                            <div class="shoes-img2">
+                                <a routerLink="collection-detail/{{collect[0].collectionId}}">
+                                    <img [src]="createImgPath(collect[0].imageName2)">
+                                </a>
+                            </div>
+                            <p class="sport_text">{{collect[0].productName1}}</p>
+                            <div class="dolar_text">$<strong style="color: #f12a47;">{{collect[0].pricePro2}}</strong> </div>
+                            
+                        </div>
+                        <div class="new_bt3">
+                            <div class = "text">
+                                <div class ="chotdon">
+                                    <div class="right_part2">
+                                        <a routerLink="/checkout">
+                                            <button class="buy_bt"(click)=addCart(collect[0])>Buy now</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <p class="consectetur_text">Besides that, there are other special collections...</p>
+        <div class="collection_section_2">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="about-img">
+                        <div class="shoes-imgnot">
+                                <a routerLink="collection-detail/{{collect[1].collectionId}}">
+                                    <img [src]="createImgPath(collect[1].imageName)">
+                                </a>
+                            </div>
+                            <p class="sport_text">{{collect[1].productName1}}</p>
+                            <div class="dolar_text">$<strong style="color: #f12a47;">{{collect[1].pricePro1}}</strong> </div>
+                            
+                        </div>
+                            <div class="new_bt2"><p class = "text1">{{collect[1].collectionName}}</p>
+                                <p class = "text2">{{collect[1].price}}</p>
+                            </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-img2">
+                            <div class="shoes-img2">
+                                <a routerLink="collection-detail/{{collect[1].collectionId}}">
+                                    <img [src]="createImgPath(collect[1].imageName2)">
+                                </a>
+                            </div>
+                            <p class="sport_text">{{collect[1].productName1}}</p>
+                            <div class="dolar_text">$<strong style="color: #f12a47;">{{collect[1].pricePro2}}</strong> </div>
+                            
+                        </div>
+                        <div class="new_bt3">
+                            <div class = "text">
+                                <div class ="chotdon">
+                                    <div class="right_part2">
+                                        <a routerLink="/checkout">
+                                            <button class="buy_bt"(click)=addCart(collect[1])>Buy now</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+    <button md-raised-button id="my-btn" class="md-raised md-primary" (click)="onEdit()"><i class="fa-solid fa-angle-up"></i></button>
+</div>
+<app-footer></app-footer>
+<script>
+    //Get the button
+    var mybutton = document.getElementById("my-btn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+        {
+            mybutton.style.display = "block";
+        } 
+        else 
+        {
+            mybutton.style.display = "none";
+        }
+    }
+</script>
+
+<style>
+    .row{
+        margin-top: 20pt;
+        margin-bottom: 20pt;
+    }
+</style>

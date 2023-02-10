@@ -1,0 +1,60 @@
+
+<app-nav></app-nav>
+<div class="collection_text">Sales policy</div>
+<!-- ------------------------------------- -->
+<!-- services -->
+<div class="services">
+   <div class="container">
+            <div class="text_align_center">
+               <h2 id ="service">JFT's car sales process</h2>
+               <p style="text-align: center;">Your happiness and satisfaction is our top priority!</p>
+            </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="service_text">
+            <i><img src="assets/images/1.jpg" alt="#"/></i>
+            <h3>A D V I S E</h3>
+            <p>We always use all our enthusiasm and ability to give advice tailored to the needs of our customers. Besides, we appreciate the usefulness and practicality so that customers can have a better experience when using our services. We will always learn and absorb new things to be able to bring comprehensiveness every day!</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service_text">
+            <i><img src="assets/images/2.jpg" alt="#"/></i>
+            <h3>S A L E S</h3>
+            <p>Our website supports customers to order online, after we receive your order, we will call you to determine the next date to directly deposit (Note: time accepted within 3-5 days). All procedures will then be supported and performed directly at the store. After the purchase and sale procedure is completed, the customer can receive the vehicle and inspect it directly at our store.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service_text">
+            <i><img src="assets/images/3.jpg" alt="#"/></i>
+            <h3>G U I D E</h3>
+            <p>After completing the procedure at JFT and in the process of using JFT's products, if you need any advice related to technical issues, technology of the product you have purchased, JFT is always willing to help you at all times, through the hotline: (84) 1010101010.</p>
+            <p>Thank you for your support</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<app-footer></app-footer>
+<button md-raised-button id="my-btn" class="md-raised md-primary" (click)="onEdit()"><i class="fa-solid fa-angle-up"></i></button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("my-btn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+    {
+        mybutton.style.display = "block";
+    } 
+    else 
+    {
+        mybutton.style.display = "none";
+    }
+}
+</script>

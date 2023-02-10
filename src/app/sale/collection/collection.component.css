@@ -1,0 +1,120 @@
+#my-btn {
+  background-color: #467dcf;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: fixed;
+    bottom: 30px;
+    right: 0.5em;
+  }
+button {
+    margin-left: 1217px;
+}
+
+#my-btn:hover{
+  background-color: #00B2BF;
+}
+
+.buy_bt {
+  width: 210px;
+}
+
+.new_bt {
+width: 18%;
+    float: left;
+    background-color: rgb(228, 23, 23);
+    font-size: 14pt;
+    text-align: center;
+    color: #ffffff;
+    height: 50px;
+    margin-left: -60px;
+}
+
+.shoes-img{
+	width: 100%;
+	float: left;
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	margin: 0px;
+}
+
+.new_bt2 {
+  width: 30%;
+  float: left;
+  background-color: rgb(236 231 231);
+  font-size: 14pt;
+  text-align: center;
+  color: #ffffff;
+  height: 70px;
+  margin-left: 68%;
+  }
+
+  .new_bt3 {
+    width: 60%;
+    float: left;
+    background-color: rgb(236 231 231);
+    font-size: 14pt;
+    text-align: center;
+    color: #ffffff;
+    height: 50px;
+    margin: -1px 0px 0px -203px;
+    box-shadow: 0px 0px 10px 0px;
+  }
+
+
+.text1 {
+  text-align: center;
+  padding-top: 6px;
+  margin-left: -26px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #120a0a;
+}
+
+.text2 {
+  text-align: center;
+  padding-bottom: 5px;
+  margin-left: -24px;
+  font-size: 1.8rem;
+  margin-top: -13px;
+  font-weight: bold;
+  color: #120a0a;
+}
+
+.text {
+  text-align: center;
+  padding-top: 6px;
+  margin-left: -120px;
+
+}
+
+.left_part2 {
+  width: 60%;
+  float: left;
+  padding-left: 16px;
+  padding-top: 0;
+  margin-left: -246%;
+}
+
+.right_part2 {
+  width: 30%;
+  float: left;
+  padding-top: 0;
+  padding-right: -10px;
+  margin-left: -234%;
+}
+
+.shoes-imgnot {
+  padding-top: 80px;
+}
+
+.sport_text{
+  padding-top: 28px;
+}
+
+.dolar_text {
+  margin-bottom:20px;
+}

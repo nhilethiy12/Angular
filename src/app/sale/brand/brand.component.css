@@ -1,0 +1,28 @@
+#myBtn {
+  background-color: #467dcf;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: fixed;
+  bottom: 30px;
+  right: 0.5em;
+}
+button {
+  margin-left: 1217px;
+}
+
+#my-btn:hover{
+        background-color: #00B2BF;
+}
+
+.racing_shoes {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 20px;
+}
+
+.collectipn_section_3 {
+  background-color: #080606;
+}

@@ -1,0 +1,94 @@
+<app-nav></app-nav>
+<div class="all">
+    <div class="container">
+        <div class="row p-5">
+            <div class="col-md-5">
+                <img [src]="createImgPath(products.productImage)">
+            </div>
+            <div class="col-md-7 detail-col">
+                <h1 class = "dt-text text-center">{{products.productName}}</h1>
+                <div class="star_text">
+                    
+                        <div class="dt-price" style="color: rgb(227 155 47);">Price: ${{products.price | number}}</div>
+                        <div class="btn-di">
+                            <button type ="button" class="btn" (click)="dec(products)"><i class="fa fa-minus"></i></button> 
+                            <span class = "quantity" style="color: white;">{{products.qnt}}</span>
+                            <button type ="button" class="btn"(click)="inc(products)"><i class="fa fa-plus"></i></button>
+                        </div>
+                    <div class ="chotdon">
+                        <div class="left_part2">
+                                <button class="cart_bt" (click)="addCart(products)" style="background-color: #856f09;"><i class="fa-solid fa-cart-plus"></i>
+                                    <span class="text_add"style="color: white;"> Add To Cart</span>
+                                </button>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+            <div class="detail">
+                <h3>PRODUCT DETAILS</h3>
+                <p>{{products.detail}}</p>        
+            </div>  
+            <div class="detail">
+                <h3>PRODUCT OTHERS</h3>
+                <div class="col-sm-4" *ngFor="let pro of product">
+                <div class="best_shoes" id="a">
+                    <p class="best_text">{{pro.productName}}</p>
+                    <div class="shoes_icon">
+                        <a routerLink="product-detail/{{pro.productId}}"> 
+                            <img [src]="createImgPath(pro.productImage)">
+                        </a> 
+                    </div>
+                    <div class="left_part1">
+                        <ul>
+                            <li><a href="#"><img src="assets/images/icon-star.png"></a></li>
+                            <li><a href="#"><img src="assets/images/icon-star.png"></a></li>
+                            <li><a href="#"><img src="assets/images/icon-star.png"></a></li>
+                            <li><a href="#"><img src="assets/images/icon-star.png"></a></li>
+                            <li><a href="#"><img src="assets/images/icon-star.png"></a></li>
+                        </ul>
+                    </div>
+                    <div class="star_text">
+                        <div class="left_part">
+                            <div class="shoes_price2">$<span style="color: #8b8b8b;">{{pro.price | number}}</span></div>
+                        </div>
+                    </div>
+                    <div class ="chotdon2">
+                        <div class="left_part2">
+                                <button class="cart_bt"><i class="fa-solid fa-cart-plus"></i>
+                                    <span class="text_add"(click)=addCart(pro) style="color: white;"> Add To Cart</span>
+                                </button>                       
+                        </div>
+                            <div class="right_part2">
+                                 <a routerLink="/checkout">
+                                    <button class="buy_bt"(click)=addCart(pro)>Buy now</button>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+            </div>     
+            </div>
+        </div>
+    </div>
+</div>
+
+<button md-raised-button id="my-btn" class="md-raised md-primary" (click)="onEdit()"><i class="fa-solid fa-angle-up"></i></button>
+<app-footer></app-footer>
+<script>
+    //Get the button
+    var mybutton = document.getElementById("my-btn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+        {
+            mybutton.style.display = "block";
+        } 
+        else 
+        {
+            mybutton.style.display = "none";
+        }
+    }
+</script>
+

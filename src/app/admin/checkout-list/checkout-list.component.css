@@ -1,0 +1,8 @@
+.my-pagination /deep/ .ngx-pagination .current {
+    background: red;
+}
+
+.imge {
+    margin-left: 150px;
+    width: 120px;
+}

@@ -1,0 +1,115 @@
+<app-nav></app-nav>
+<div class="collection_text">Warranty policy</div>
+<!-- ------------------------------------- -->
+<div class="row">
+   <div class="col-md-12">
+      <div id="testi" class="carousel slide testimonial_banner" data-ride="carousel">
+         <ol class="carousel-indicators" style="transform: rotate(0deg); margin-top:650px">
+            <li data-target="#testi" data-slide-to="0" class="active"></li>
+            <li data-target="#testi" data-slide-to="1"></li>
+            <li data-target="#testi" data-slide-to="2"></li>
+            <li data-target="#testi" data-slide-to="3"></li>
+         </ol>
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <div class="container-fluid">
+                  <div class="carousel-caption testi">
+                    <div class="test_box text_align_center">
+                      <i class="left_di"><img src="assets/images/tese1.png"/></i>
+                      <h2 style="font-size: 50px">1</h2>
+                      <h1>Warranty conditions</h1>
+                      <p>JFT only guarantees to repair and replace damaged parts of new vehicles in the following conditions: the vehicle operates in normal conditions, the spare parts are not good, the assembly error is not good.</p>
+                      <i class="right_di"><img src="assets/images/tese2.png"/></i>
+                    </div>
+                    <div class="por_file">
+                      <i><img src="assets/images/like.jpg"/></i>
+                      <h4>believable</h4>
+                    </div>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="container-fluid">
+                  <div class="carousel-caption testi">
+                    <div class="test_box text_align_center">
+                      <i class="left_di"><img src="assets/images/tese1.png"/></i>
+                      <h2 style="font-size: 50px">2</h2>
+                      <h1>System Warranty</h1>
+                      <p>A powertrain warranty simply covers the components that help power and keep the vehicle moving, including the engine, transmission, and drivetrain. If any component fails or is damaged during the warranty period, the manufacturer will be responsible for the full cost of the repair or replacement. For repairs from other parts, you may have to pay for it yourself, even though the warranty period has not expired. </p>
+                      <i class="right_di"><img src="assets/images/tese2.png"/></i>
+                    </div>
+                    <div class="por_file">
+                      <i><img src="assets/images/like.jpg"/></i>
+                      <h4>believable</h4>
+                    </div>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="container-fluid">
+                  <div class="carousel-caption testi">
+                    <div class="test_box text_align_center">
+                      <i class="left_di"><img src="assets/images/tese1.png"/></i>
+                      <h2 style="font-size: 50px">3</h2>
+                      <h1>Spare parts warranty</h1>
+                      <p>All genuine passenger car parts are covered by a two-year unlimited mileage warranty. The warranty period is calculated from the date of installation at the JFT store. </p>
+                      <i class="right_di"><img src="assets/images/tese2.png"/></i>
+                    </div>
+                    <div class="por_file">
+                      <i><img src="assets/images/like.jpg"></i>
+                      <h4>believable</h4>
+                    </div>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="container-fluid">
+                  <div class="carousel-caption testi">
+                    <div class="test_box text_align_center">
+                      <i class="left_di"><img src="assets/images/tese1.png"/></i>
+                      <h2 style="font-size: 50px">4</h2>
+                      <h1>Warranty extension</h1>
+                      <p>The "Warranty Extension Program" gives owners the opportunity to extend the warranty period from 1 year to 2 years so you can have complete peace of mind about your travel companion. So each customer who buys a new car will receive a 3-year factory warranty and have the opportunity to buy an additional warranty extension package of up to 2 years.</p>
+                      <i class="right_di"><img src="assets/images/tese2.png"/></i>
+                    </div>
+                    <div class="por_file">
+                      <i><img src="assets/images/like.jpg"/></i>
+                      <h4>believable</h4>
+                    </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <a class="carousel-control-prev" href="#testi" role="button" data-slide="prev">
+         <i class="fa fa-angle-left" aria-hidden="true"></i>
+         <span class="sr-only">Previous</span>
+         </a>
+         <a class="carousel-control-next" href="#testi" role="button" data-slide="next">
+         <i class="fa fa-angle-right" aria-hidden="true"></i>
+         <span class="sr-only">Next</span>
+         </a>
+      </div>
+   </div>
+</div>
+<app-footer></app-footer>
+<button md-raised-button id="my-btn" class="md-raised md-primary" (click)="onEdit()"><i class="fa-solid fa-angle-up"></i></button>
+
+<script>
+    //Get the button
+    var mybutton = document.getElementById("my-btn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+        {
+            mybutton.style.display = "block";
+        } 
+        else 
+        {
+            mybutton.style.display = "none";
+        }
+    }
+</script>
+-----------------------------

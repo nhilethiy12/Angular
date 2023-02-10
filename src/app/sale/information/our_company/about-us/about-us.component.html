@@ -1,0 +1,120 @@
+<app-nav></app-nav>
+<div class="collection_text">About Us</div>
+<!-- ------------------------------------- -->
+<div class="collection_section layout_padding">
+  <section class="ftco-section" style="background-color: black;"> 
+  <div class="container text-center">
+    <h2 class="mb-4" style="font-family: Optima; color: rgb(255, 78, 91);">Welcome to JFT </h2>
+        <p>Hi! We are JFT! <br> What a joy it is when we get to meet you - to serve you.</p>
+        <p>JFT always wants to bring the best and most prestigious experiences, services to customers. To do that, we always put quality first, each department strictly implements regulations to ensure that customers have the best experience and selection that we have can bring.</p>
+        <p>With the cooperation with prestigious and leading brands in the world such as Merceses, Audi, Lamborghini, Porche,... we ensure that the quality of machines and techniques is always the top optimization issue.</p>
+        <p>So what are you wondering about? Take a look at our website and maybe you'll find the choice you're looking for!</p>
+        <p><a routerLink="/models" class="btn btn-warning" style="margin-bottom:20pt">Shop now</a></p>
+  </div>
+  </section>
+
+  <section class="ftco-section" id="a">
+    <div class="container">
+        <a> </a> <br>
+        <a> </a><br>
+        <a> </a><br>
+        <a> </a><br>
+        <a> </a><br>
+        <a> </a><br>
+        <a> </a><br>
+        <a> </a><br>
+        <a> </a><br>
+        <a> </a><br>
+        <a> </a><br>
+        <a> </a><br>
+        <a> </a><br>
+        <a> </a><br>
+        <a> </a><br>
+        <a> </a><br>
+        <a> </a><br>
+        
+    </div>
+</section>
+
+<section class="ftco-section testimony-section" style="background-color: black;">   
+      <div class="container text-center">
+          <span class="subheading" style="font-family: Optima; font-size: 20pt; color: rgb(255, 78, 91); font-weight: bold;">Testimony</span>
+          <h3 class="mb-4" style="color: white; font-family: Optima;">Our satisfied customer says</h3>
+          <p>Here are the honest reviews of customers who have purchased and used our products! <br> Let's see it</p>
+
+          <div class="row">
+            <div class="col-sm-3">
+              <img src="assets/images/person_1.jpg" style="background: white; border-radius: 50%; height: 150px; margin: 20px; padding: 10px; text-align: center; width: 150px;">
+              <div class="text-center">
+                <p class="mb-5 pl-4 line">It's surprising that JFT not only brings great products but also very fast sales, I am very satisfied with the service here.</p>
+                <p class="name">Mark Zuckerberg</p>
+                <span class="position" style="letter-spacing: 2px; color:white">CEO</span>
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+              <img src="assets/images/person_2.jpg" style="background: white; border-radius: 50%; height: 150px; margin: 20px; padding: 10px; text-align: center; width: 150px;">
+              <div class="text-center">
+                <p class="mb-5 pl-4 line">As a very fastidious person, I had to say that service quality comes with product quality, a very prestigious contract for me.</p>
+                <p class="name">Kylie Jenner</p>
+                <span class="position" style="letter-spacing: 2px; color:white">MODEL</span>
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+              <img src="assets/images/person_3.jpg" style="background: white; border-radius: 50%; height: 150px; margin: 20px; padding: 10px; text-align: center; width: 150px;">
+              <div class="text-center">
+                <p class="mb-5 pl-4 line">I really like sports cars, but researching on websites is hard and I am grateful that JFT has given me the best options.</p>
+                <p class="name">Mason Mount</p>
+                <span class="position" style="letter-spacing: 2px; color:white">FOOTBAL PLAYER</span>
+              </div>
+            </div>
+
+            <div class="col-sm-3" style="margin-bottom: 20pt;"> 
+              <img src="assets/images/person_4.jpg" style="background: white; border-radius: 50%; height: 150px; margin: 20px; padding: 10px; text-align: center; width: 150px;">
+              <div class="text-center">
+                <p class="mb-5 pl-4 line">I just found out about JFT by accident, but you guys really surprised me. I don't know what to say other than amazing good job!</p>
+                <p class="name">Shawn Mendes</p>
+                <span class="position" style="letter-spacing: 2px; color:white">SINGER</span>
+              </div>
+            </div>
+
+          </div>
+          <button md-raised-button id="my-btn" class="md-raised md-primary" (click)="onEdit()"><i class="fa-solid fa-angle-up"></i></button>  
+      </div>
+</section>
+<app-footer></app-footer>
+<script>
+  //Get the button
+  var mybutton = document.getElementById("my-btn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+      {
+          mybutton.style.display = "block";
+      } 
+      else 
+      {
+          mybutton.style.display = "none";
+      }
+  }
+</script>
+
+<style>
+    h2{
+        color: white;
+    }
+    p{
+        color: white;
+    }
+    #a{
+        background-image: url(assets/images/about_us.jpg);
+        background-repeat: no-repeat;
+        
+    }
+    
+</style>
+</div>

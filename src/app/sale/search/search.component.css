@@ -1,0 +1,9 @@
+.form-inline .form-control {
+    display: inline-block;
+    width: 1000px;
+    vertical-align: middle;
+}
+
+.btn-primary {
+    margin-left: 8px;
+}

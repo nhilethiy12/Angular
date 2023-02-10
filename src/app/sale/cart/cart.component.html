@@ -1,0 +1,102 @@
+<app-nav></app-nav>
+<ng-container *ngIf="getCartDetails.length != 0">
+    <div class="cart">
+    <div class="cart-table">
+        <div class="cart-product">
+            <div *ngIf="getCartDetails">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th class="th_name">Product Name</th>
+                            <th class="th_image">Product Image</th>
+                            <th class="th_price">Price</th>
+                            <th class="th_qnt">Quantity</th>
+                            <th class="th_tt">Total</th>
+                            <th class="th_ac">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let getCartDetail of getCartDetails">
+                            <td *ngIf="getCartDetail.productName">{{getCartDetail.productName}}</td>
+                            <td *ngIf="getCartDetail.collectionName">{{getCartDetail.collectionName}}</td>
+                            <td *ngIf="getCartDetail.fileName">
+                                <img [src]="createImgPath(getCartDetail.fileName)" width="200" height="50">
+                            </td>
+                            <td *ngIf="getCartDetail.imageName2">
+                                <img [src]="createImgCPath(getCartDetail.imageName)" width="200" height="50">
+                                <img [src]="createImgCPath(getCartDetail.imageName2)" width="200" height="50">
+                            </td>
+                            <td>{{getCartDetail.price | number}}$</td>
+                            <td>
+                                <div class="form-group" style="color: #000;"*ngIf="getCartDetail.qnt">
+                                    <button type ="button" class="btn" (click)="decQnt(getCartDetail.productId, getCartDetail.qnt)"><i class="fa fa-minus"></i></button> 
+                                    <span class = "quantity">{{getCartDetail.qnt}}</span>
+                                    <button type ="button" class="btn"(click)="incQnt(getCartDetail.productId, getCartDetail.qnt,getCartDetail.qnt1)"><i class="fa fa-plus"></i></button>
+                                </div>
+                            </td>
+                            <td *ngIf="getCartDetail.qnt * getCartDetail.price">{{getCartDetail.qnt * getCartDetail.price | number}}$</td>
+                            <td>
+                                <button class="btn btn-danger"(click)="singleDelete(getCartDetail.productId)"><i class="fas fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Total: {{total | number}}$</h3>
+                        <a routerLink="/checkout">
+                            <button class="btn btn-success" id = "btn">Checkout</button>
+                        </a>
+                    </div>
+                
+                    <div class="col-md-10 text-right">
+                        <button class="btn btn-danger" id = "btnr"(click)="removeall()"><i class="fas fa-trash-alt"></i>Remove All Item</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button md-raised-button id="myBtn" class="md-raised md-primary" (click)="onEdit()"><i class="fa-solid fa-angle-up"></i></button>
+</div>
+</ng-container>
+
+<ng-container *ngIf="getCartDetails.length == 0">
+    <div class="container">
+        <div class="card">
+            <div class="center">
+                <img src="/assets/images/icon-empty-cart.png" alt="" id="empty">
+                <h4>Your cart is empty!</h4>
+                <h5>Add item to it now</h5>
+                <a href="/models">
+                    <button class="btn btn-warning">Shop now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</ng-container>
+<app-footer></app-footer>
+<script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+        {
+            mybutton.style.display = "block";
+        } 
+        else 
+        {
+            mybutton.style.display = "none";
+        }
+    }
+</script>
+
+<style>
+    #empty{
+        width: 100%;
+        height: 100%;
+    }
+</style>

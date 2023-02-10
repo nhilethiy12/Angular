@@ -1,0 +1,164 @@
+<!-- header section start -->
+<app-nav></app-nav>
+<swiper [config]="config">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"*ngFor="let slide of slides"><img [src]="createImgSPath(slide.fileName)"></div>
+    </div>
+   
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+   
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </swiper>
+
+
+
+<!-- header section end -->
+<!-- new collection section start -->
+<div class="layout_padding collection_section">
+<div class="container">
+    <h1 class="new_text"><strong>New  Collection</strong></h1>
+    <p class="consectetur_text">This is the new products that we have brought to you. <br>
+        ------------------------------------- <br>
+     NEW COLLECTION - NEW CHOICES </p>
+     <div class="collection_section_2">
+        <a routerLink="collection-detail/{{collect[0].collectionId}}">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="about-img">
+                        <button class="new_bt">New</button>
+                        <div class="shoes-img">
+                                <a routerLink="collection-detail/{{collect[0].collectionId}}">
+                                    <img [src]="createImgCPath(collect[0].imageName)">
+                                </a>
+                            
+                            <p class="sport_text">{{collect[0].productName1}}</p>
+                            <div class="dolar_text">
+                                $<strong style="color: #f12a47;">{{collect[0].pricePro1}}</strong> 
+                            </div>
+                        </div>
+                    </div>
+                    <a routerLink="/collection">
+                        <button class="seemore_bt">See More</button>
+                    </a>   
+                </div>
+                <div class="col-md-6">
+                    <div class="about-img2">
+                        <div class="shoes-img2">
+                            <a routerLink="collection-detail/{{collect[0].collectionId}}">
+                                <img [src]="createImgCPath(collect[0].imageName2)">
+                            </a>
+                        </div>
+                        <p class="sport_text">{{collect[0].productName1}}</p>
+                        <div class="dolar_text">$<strong style="color: #f12a47;">{{collect[0].pricePro2}}</strong> </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+</div>
+<div class="collection_section layout_padding">
+<div class="container">
+    <h1 class="new_text"><strong>New Arrivals Products</strong></h1>
+    <p class="consectetur_text">Newly launched car models with outstanding features and luxurious and eye-catching appearance have been gathered here. <br>
+        ------------------------------------- <br>
+        WHEN YOU HAVE A NEED <br>
+        HOPE WE ARE THE FIRST CHOICE!</p>
+</div>
+</div>
+<!-- new collection section end -->
+<!-- New Arrivals section start -->
+<div class="layout_padding gallery_section">
+    <div class="container">
+        <div class="row">     
+            <div class="col-sm-4" *ngFor="let pro of productDb |
+            paginate: { 
+                itemsPerPage: 6, 
+                currentPage: page,
+                totalItems: totalLength }">">
+                <a routerLink="models/product-detail/{{pro.productId}}"> 
+                    <div class="best_shoes" id="a">
+                        <p class="best_text">{{pro.productName}} </p>
+                            <div class="shoes_icon"><img [src]="createImgPath(pro.fileName)"> 
+                                
+                            </div>
+
+                        <div class="star_text">
+                            <div class="text-center">
+                                <div class="shoes_price">$<span style="color: #8B8B8B;">{{pro.price | number}}</span></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </a>
+            </div>  
+        </div>
+        <div class="buy_now_bt">
+            <a routerLink="/models">
+                <button class="buy_text">SEE MORE</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="layout_padding1 brand_section">
+    <p class="p_text">OUTSTANDING BRAND</p> 
+        <owl-carousel-o [options]="productOptions">
+            <ng-template carouselSlide *ngFor="let pro of brand">
+                <div class="slide">
+                    <a href="/product-brand/{{pro.brandId}}">
+                        
+                        <img [src]="createImgBPath(pro.fileName)">
+                    </a>
+                </div>
+            </ng-template>
+        </owl-carousel-o>
+</div>
+
+<div class="layout_padding2 topsearch_section">
+    <p class="p_text">HOT CARS</p> 
+    <owl-carousel-o [options]="searchOptions">
+        <ng-template carouselSlide *ngFor="let pro of productDb">
+            <div class="slide">
+                <a routerLink="/product-detail/{{pro.productId}}">
+                    <img [src]="createImgPath(pro.fileName)">
+                </a>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+</div>
+<button md-raised-button id="my-btn" class="md-raised md-primary" (click)="onEdit()"><i class="fa-solid fa-angle-up"></i></button>
+<app-footer></app-footer>
+<script>
+    //Get the button
+    var mybutton = document.getElementById("my-btn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+        {
+            mybutton.style.display = "block";
+        } 
+        else 
+        {
+            mybutton.style.display = "none";
+        }
+    }
+</script>
+
+<style>
+    #a{
+        transition-duration: .3s;
+        transition-property: transform;
+        transition-timing-function: ease-out;
+    }
+    #a:hover{
+        transform: translateY(-20px);
+    }
+</style>

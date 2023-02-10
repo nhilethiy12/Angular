@@ -1,0 +1,163 @@
+.card {
+    height: 66vh;
+    margin: 25px;
+    padding: 25px;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.center img {
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    outline: none;
+    height: 162px;
+    width: 400px;
+    margin: 20px 0px;
+}
+
+h4, h5 {
+    font-weight: 400;
+}
+
+.cart-table {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    word-wrap: break-word;
+    background-color: #000;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.25rem;
+    color: #fff;
+}
+
+.center .btn {
+    font-size: 14px !important;
+    margin-top: 20px !important;
+    font-weight: 400;
+    border-radius: 3px !important;
+}
+
+.cart-product {
+    margin-left: 90px;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    text-align: center;
+    vertical-align: initial;
+    border-top: 1px solid #ddd;
+    font-size: 1.8rem;
+}
+
+.th_name {
+    width: 224px;
+}
+
+.th_price {
+    width: 224px;
+}
+.th_qnt {
+    width: 224px;
+}
+
+.th_tt {
+    width: 224px;
+}
+
+.quantity {
+    margin: 20px;
+    color: #fff;
+    align-items: center;
+}
+
+.row {
+    margin-left: 30px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-left: 370px;
+}
+
+.pay {
+    margin-top: 10px;
+    margin-left: 60px;
+}
+
+.btn-pay {
+    width: 40%;
+    height: 62%;
+    border-radius: 4px;
+    background-color: rgb(90, 21, 218);
+    color: #fff;
+}
+
+.btn-pay:hover {
+    cursor: pointer;
+    background-color: #dddbe6;
+}
+
+.text-right {
+    margin-left: 123px;
+    margin-top: -57px;
+}
+
+#myBtn {
+    background-color: #467dcf;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: fixed;
+    bottom: 30px;
+    right: 0.5em;
+  }
+
+
+#myBtn:hover{
+        background-color: #00B2BF;
+}
+
+#empty {
+    padding-top: 42px;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+}
+
+#btn {
+    margin-top: -16%;
+    margin-left: 114%;
+    width: 120px;
+    background-color: rgb(8 182 114);
+}
+
+#btn:hover {
+    background-color: #f7a816;
+}
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    margin-top: -2%;
+}

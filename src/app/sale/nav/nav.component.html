@@ -1,0 +1,55 @@
+
+<div class="header_section">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="logo">
+                <a href="#">
+                    <img src="assets/images/logo.png">
+                </a>
+                <div class="brand_img">
+                    <a href="#">
+                        <img src="assets/images/brand.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+             
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" routerLink="/">Home</a>
+                    <a class="nav-item nav-link" routerLink="/collection">Collection</a>
+                    <a class="nav-item nav-link" routerLink="/models">Models</a>
+                    <a class="nav-item nav-link" routerLink="/brand">Brand</a>
+                    <a class="nav-item nav-link" routerLink="/contact">Contact</a>
+                    <a class="nav-item nav-link last nav__link_search"routerLink="/search">
+                        <img src="assets/images/icon-search.png">
+                    </a>
+                    <a class="nav-item nav-link last" routerLink="/cart">
+                        <img src="assets/images/icon-shop.png">
+                        <div style="font-size: 10px" class="badge bg-danger">{{cartItem}}</div>
+                    </a>
+                    <li class="header__navbar-item header__navbar-user">
+                        <img src="/assets/images/avt.jpg" alt="" class="header__navbar-user-avt">
+
+                        <ul class="header__navbar-user-menu">
+                            <li class="header__navbar-user-item">
+                                <a href="/admin">Admin</a>   
+                            </li>
+
+                            <li class="header__navbar-user-item">
+                                <a routerLink="/">Customer</a>   
+                            </li>
+
+                        </ul>
+                    </li>
+                
+                </div>
+            </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+

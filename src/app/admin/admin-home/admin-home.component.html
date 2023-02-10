@@ -1,0 +1,171 @@
+ <!-- Theme style -->
+ 
+<div class="wrapper">
+  <!-- Preloader -->
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <li class="header__navbar-item header__navbar-user">
+      <img src="/assets/images/avt.jpg" alt="" class="header__navbar-user-avt">
+    
+      <ul class="header__navbar-user-menu">
+          <li class="header__navbar-user-item">
+              <a href="/admin-home">Admin</a>   
+          </li>
+    
+          <li class="header__navbar-user-item">
+              <a routerLink="/">Customer</a>   
+          </li>
+    
+      </ul>
+    </li>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a routerLink="index3.html" class="brand-link">
+      <img src="assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light" style="font-size: 20px">Admin</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a routerLink="#" class="d-block">ADMIN-LINH THONG MINH</a>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <!-- <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a routerLink="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Layout Options
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a routerLink="/product-list" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Product Manage</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/brand-list" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Brand Manage</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/collection-list" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Collection Manage</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/slide-list" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Slide Manage</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/checkout-list" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Checkout Manage</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/contact-list" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Contact Manage</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <div class="main-panel">
+    <div class="content-wrapper">
+      <div class="page-header">
+        <h3 class="page-title">
+          <span class="page-title-icon bg-gradient-primary text-white me-2">
+            <i class="mdi mdi-home"></i>
+          </span> Dashboard
+        </h3>
+
+      </div>
+      <div class="row">
+        <div class="col-md-4 stretch-card grid-margin">
+          <div class="card bg-gradient-danger card-img-holder text-white">
+            <div class="card-body">
+              <img src="assets/images/admin1.png" class="card-img-absolute" alt="circle-image" />
+              <h4 class="font-weight-normal mb-3">Weekly Revenue <i class="mdi mdi-chart-line mdi-24px float-right"></i>
+              </h4>
+              <h2 class="mb-5">$ 15,0000</h2>
+              <h6 class="card-text">Increased by 60%</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 stretch-card grid-margin">
+          <div class="card bg-gradient-info card-img-holder text-white">
+            <div class="card-body">
+              <img src="assets/images/admin2.png" class="card-img-absolute" alt="circle-image" />
+              <h4 class="font-weight-normal mb-3">Monthly Revenue <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
+              </h4>
+              <h2 class="mb-5">45,6334</h2>
+              <h6 class="card-text">Decreased by 10%</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 stretch-card grid-margin">
+          <div class="card bg-gradient-success card-img-holder text-white">
+            <div class="card-body">
+              <img src="assets/images/admin3.png" class="card-img-absolute" alt="circle-image" />
+              <h4 class="font-weight-normal mb-3">Total number of cars sold<i class="mdi mdi-diamond mdi-24px float-right"></i>
+              </h4>
+              <h2 class="mb-5">95,5741</h2>
+              <h6 class="card-text">Increased by 5%</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  <!-- Content Wrapper. Contains page content -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>

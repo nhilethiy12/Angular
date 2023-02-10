@@ -1,0 +1,166 @@
+<div class="wrapper">
+    <!-- Preloader -->
+  
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <li class="header__navbar-item header__navbar-user">
+        <img src="/assets/images/avt.jpg" alt="" class="header__navbar-user-avt">
+      
+        <ul class="header__navbar-user-menu">
+            <li class="header__navbar-user-item">
+                <a href="/admin-home">Admin</a>   
+            </li>
+      
+            <li class="header__navbar-user-item">
+                <a routerLink="/">Customer</a>   
+            </li>
+      
+        </ul>
+      </li>
+    </nav>
+    <!-- /.navbar -->
+  
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a routerLink="index3.html" class="brand-link">
+        <img src="assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light" style="font-size: 20px">Admin</span>
+      </a>
+  
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a routerLink="#" class="d-block">ADMIN-LINH THONG MINH</a>
+          </div>
+        </div>
+  
+        <!-- SidebarSearch Form -->
+        <!-- <div class="form-inline">
+          <div class="input-group" data-widget="sidebar-search">
+            <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+            <div class="input-group-append">
+              <button class="btn btn-sidebar">
+                <i class="fas fa-search fa-fw"></i>
+              </button>
+            </div>
+          </div>
+        </div> -->
+  
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+                 with font-awesome or any other icon font library -->
+            <li class="nav-item">
+              <a routerLink="#" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                  Layout Options
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a routerLink="/product-list" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Product Manage</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a routerLink="/brand-list" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Brand Manage</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a routerLink="/collection-list" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Collection Manage</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a routerLink="/slide-list" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Slide Manage</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                <a routerLink="/checkout-list" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Checkout Manage</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/contact-list" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Contact Manage</p>
+                </a>
+              </li>
+              </ul>
+            </li>
+            
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+    <div class="content-wrapper">
+        <div class="container">
+            <h2>LIST BRAND</h2>
+            
+            <form action="" method="POST" class="form-inline" [formGroup]="searchFormBrand" (ngSubmit)="onSearchBrand()">
+                <div class="form-group">
+                    <label class="sr-only" for="">label</label>
+                    <input type="text" [(ngModel)]="searchText" class="form-control" formControlName = "brandName" placeholder="search by brandName">
+                </div>
+            
+                <button type = "submit" class="btn btn-primary mr-2">Search</button>
+                <a routerLink="/brand-create" class="btn btn-primary">Add New Brand</a>
+            </form>
+            
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Brand Name</th>
+                    <th>Image</th>   
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let brand of brands | filter: searchText| 
+                paginate: { 
+                    itemsPerPage: 9, 
+                    currentPage: page,
+                    totalItems: totalLength }">
+                    <td>{{brand.brandId}}</td>
+                    <td>{{brand.brandName}}</td>
+                    <td>
+                        <img [src]="createImgPath(brand.fileName)" alt="" width="90">
+                    </td>
+                    <td>
+                        <a [routerLink]="['/brand-update', brand.brandId]" class="btn btn-sm btn-primary mr-3" style="width: 60px;">Edit</a>
+                        <a href="javascript:void()" (click)="onDeleteBrand(brand.brandId)" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <pagination-controls class="text-center my-pagination" (pageChange)="page = $event"></pagination-controls>
+        </div>
+     
+    </div>
+    <!-- Content Wrapper. Contains page content -->
+  
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+  </div>
+  

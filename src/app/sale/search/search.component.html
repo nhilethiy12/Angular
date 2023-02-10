@@ -1,0 +1,56 @@
+<app-nav></app-nav>
+<div class="container">
+    <h4 class="hihi">What are you looking for?</h4>
+    <form action="" method="POST" class="form-inline" [formGroup]="searchForm" (ngSubmit)="onSearch()">
+    <mat-form-field>
+        <input matInput type="text" 
+                [(ngModel)]="searchText" class="form-control" 
+                formControlName = "name" placeholder="I am looking for..."
+                [matAutocomplete]="auto">
+         <mat-autocomplete #auto="matAutocomplete">
+             <mat-option *ngFor="let option of products | filter: searchText" [value]="option.productName">
+               {{option.productName}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>  
+    <button type = "submit" class="btn btn-primary mr-2">Search</button>
+    </form>
+
+    <div class="row">
+        <div class="col-sm-4" *ngFor="let pro of products | filter: searchText">
+            <div class="best_shoes">
+                <p class="best_text">{{pro.productName}}</p>
+                <div class="shoes_icon">
+                    <a routerLink="/product-detail/{{pro.productId}}">
+                        <img [src]="createImgPath(pro.fileName)">
+                    </a>
+                </div>
+                <div class="left_part1">
+                    <ul>
+                        <li><a href="#"><img src="assets/images/icon-star.png"></a></li>
+                        <li><a href="#"><img src="assets/images/icon-star.png"></a></li>
+                        <li><a href="#"><img src="assets/images/icon-star.png"></a></li>
+                        <li><a href="#"><img src="assets/images/icon-star.png"></a></li>
+                        <li><a href="#"><img src="assets/images/icon-star.png"></a></li>
+                    </ul>
+                </div>
+                <div class="star_text">
+                        <div class="shoes_price">$ <span style="color: #8b8b8b;">{{pro.price | number}}</span></div>
+                </div>
+                <div class ="chotdon">
+                    <div class="left_part2">
+                            <button class="cart_bt"><i class="fa-solid fa-cart-plus"></i>
+                                <span class="text_add"(click)=addCart(pro) style="color: white;"> Add To Cart</span>
+                            </button>
+                    </div>
+                        <div class="right_part2">
+                            <a routerLink="/contact">
+                                <button class="buy_bt">Buy now</button>
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

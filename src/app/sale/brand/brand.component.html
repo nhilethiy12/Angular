@@ -1,0 +1,44 @@
+<!-- new collection section start -->
+<app-nav></app-nav>
+<div class="collection_text">Brand</div>
+<div class="about_main layout_padding">
+    <div class="collection_section">
+        <div class="container">
+            <h1 class="new_text"><strong>Brand</strong></h1>
+            <p class="consectetur_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+        </div>
+    </div>
+    <div class="collectipn_section_3 layuot_padding"*ngFor="let br of brands">
+        <div class="container">
+            <a routerLink="product-brand/{{br.brandId}}">
+            <div class="racing_shoes">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="mec3"><img [src]="createImgPath(br.fileName)"></div>
+                    </div>
+                    <div class="col-md-4" style="background-color: rgba(0,0,0,0.1);">
+                        <div class="sale_text"><strong><br><span style="color: #0a0506; text-transform: uppercase; color: aliceblue;">{{br.brandName}}</span> <br>CARS</strong></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        </div>
+        </div>
+        <button md-raised-button id="myBtn" class="md-raised md-primary" (click)="onEdit()"><i class="fa-solid fa-angle-up"></i></button>
+</div>
+<app-footer></app-footer>
+<script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+</script>

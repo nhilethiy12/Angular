@@ -1,0 +1,33 @@
+<app-nav></app-nav>
+<div class="collection_text"> Recruitment </div>
+<!-- ------------------------------------- -->
+<div class="collection_section layout_padding">
+  <section class="ftco-section" style="background-color: black;"> 
+    <div class="container text-center" >
+        <img src="assets/images/Recruitment.jpg">
+    </div>
+  
+    
+  </section>
+</div>
+<app-footer></app-footer>
+<button md-raised-button id="my-btn" class="md-raised md-primary" (click)="onEdit()"><i class="fa-solid fa-angle-up"></i></button>
+
+<script>
+  //Get the button
+  var mybutton = document.getElementById("my-btn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+      {
+          mybutton.style.display = "block";
+      } 
+      else 
+      {
+          mybutton.style.display = "none";
+      }
+  }
+</script>
